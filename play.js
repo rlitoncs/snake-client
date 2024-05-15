@@ -4,4 +4,4 @@ const  setupInput  = require("./input");
 console.log("Connecting ...");
 
 let connObj = connect();
-setupInput(connObj);
+setupInput(connObj); // This ensures that the connection object is available in the input.js file for sending commands to the server.
