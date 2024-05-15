@@ -16,6 +16,11 @@ const connect = function() {
   // interpret incoming data as text
   conn.setEncoding("utf8");
 
+  // Send message to server
+  conn.on("connect", () => {
+    conn.write("Name: LHL");
+  })
+
   conn.on("data", (serverData) => {
     console.log(`Server says: ${serverData}`);
   });
