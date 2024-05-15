@@ -1,3 +1,15 @@
+/**
+ * setupInput(conn) function handles data events on standard input when a User presses a key 
+ * @param {Object} conn - the established connection between client and server
+ * @returns {Object} - returns the stdin object if needed to use somewhere else 
+ *
+ * handleUserInput(key) functions handles the keys that are pressed from user and relays them to the server
+ * @param {String} key - the key pressed from user
+ *
+ */
+
+const { keyMovements, userMessages } = require('./constants'); 
+
 // Stores the active TCP connection object.
 let connection;
 
@@ -19,30 +31,30 @@ const handleUserInput = (key) => {
 
     //Move commands
     case 'w':
-      connection.write("Move: up");
+      connection.write(keyMovements.MOVE_UP_KEY);
       break;
     case 'a':
-      connection.write("Move: left");
+      connection.write(keyMovements.MOVE_UP_LEFT);
       break;
     case 's':
-      connection.write("Move: down");
+      connection.write(keyMovements.MOVE_UP_DOWN);
       break;
     case 'd':
-      connection.write("Move: right");
+      connection.write(keyMovements.MOVE_UP_RIGHT);
       break;
 
-    //Communication
+    //User Messages
     case 'h':
-      connection.write("Say: Hi there!");
+      connection.write(userMessages.H_KEY);
       break;
     case 'g':
-      connection.write("Say: Greetings!");
+      connection.write(userMessages.G_KEY);
       break;
     case 'b':
-      connection.write("Say: Bye!");
+      connection.write(userMessages.B_KEY);
       break;
     case '?':
-      connection.write("Say: I have a question!");
+      connection.write(userMessages.QUESTION_MARK_KEY);
       break;
 
     //Terminate process
