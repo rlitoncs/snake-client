@@ -10,7 +10,7 @@ const connect = function() {
   };
 
   //Create connection to server
-  const conn = net.createConnection({config});
+  const conn = net.createConnection(config);
 
   // interpret incoming data as text
   conn.setEncoding("utf8");
