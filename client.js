@@ -1,4 +1,5 @@
 const net = require("net");
+console.log("Connecting ...");
 
 // establishes a connection with the game server
 const connect = function() {
@@ -21,7 +22,5 @@ const connect = function() {
   
   return conn;
 };
-
-console.log("Connecting ...");
 
 module.exports = connect;
