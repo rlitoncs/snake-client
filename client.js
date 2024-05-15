@@ -1,5 +1,4 @@
 const net = require("net");
-console.log("Connecting ...");
 
 // establishes a connection with the game server
 const connect = function() {
@@ -19,11 +18,10 @@ const connect = function() {
   // Send message to server
   conn.on("connect", () => {
     conn.write("Name: LHL");
-    
+
 
   })
-
-
+  
   conn.on("data", (serverData) => {
     console.log(`Server says: ${serverData}`);
   });
