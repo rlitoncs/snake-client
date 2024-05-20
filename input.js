@@ -34,13 +34,13 @@ const handleUserInput = (key) => {
       connection.write(keyMovements.MOVE_UP_KEY);
       break;
     case 'a':
-      connection.write(keyMovements.MOVE_UP_LEFT);
+      connection.write(keyMovements.MOVE_LEFT_KEY);
       break;
     case 's':
-      connection.write(keyMovements.MOVE_UP_DOWN);
+      connection.write(keyMovements.MOVE_DOWN_KEY);
       break;
     case 'd':
-      connection.write(keyMovements.MOVE_UP_RIGHT);
+      connection.write(keyMovements.MOVE_RIGHT_KEY);
       break;
 
     //User Messages
