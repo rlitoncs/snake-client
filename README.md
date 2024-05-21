@@ -20,6 +20,13 @@ cd snake-client
 node play.js
 ```
 
+## Stretch
+Currently, when a user creates a new connection, no message is broadcasted to the the other users (in the terminal) when a new a player has joined. It also does not display the number of users connected. 
 
+Below I have linked my modification to the server side to include these features.
 
+It follows the same installation process as the original, but with my added implementation.
 
+Feel free to test it out with this new server to see the new features!
+
+Link to the server-side repo is [here](https://github.com/rlitoncs/snake-server)
