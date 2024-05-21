@@ -16,7 +16,7 @@ git clone git@github.com:rlitoncs/snake-client.git
 cd snake-client
 
 # Two Terminals should be opened simultaneously, one for the server and one for the client.
-Ensure the Server is up and running before you connect to it from the client side
+# Ensure the Server is up and running before you connect to it from the client side
 node play.js
 ```
 
