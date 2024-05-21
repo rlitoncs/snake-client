@@ -11,10 +11,10 @@ const keyMovements = {
 
 //Client Messages
 const userMessages = {
-  H_KEY: "Say: Hello!",
-  G_KEY: "Say: Greetings!",
-  B_KEY: "Say: Bye!",
-  QUESTION_MARK_KEY: "Say: I have a question!",
+  h: "Say: Hello!",
+  g: "Say: Greetings!",
+  b: "Say: Bye!",
+  '?': "Say: I have a question!",
 }
 
 module.exports = {

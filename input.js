@@ -28,6 +28,9 @@ const handleUserInput = (key) => {
   if(keyMovements[key]){
     connection.write(keyMovements[key]);
   }
+  if(userMessages[key]) {
+    connection.write(userMessages[key]);
+  }
 
   //Terminate Process
   if (key === '\u0003'){
