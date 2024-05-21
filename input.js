@@ -16,50 +16,22 @@ let connection;
 const setupInput = (conn) => {
   connection = conn;
 
-  const stdin = process.stdin;  // create variable to hold the stdin object so we don't have to type process.stdin multiple times
-  stdin.setRawMode(true); // Raw Mode allows us to listen for individual keypresses instead of waiting for the user to press enter
-  stdin.setEncoding("utf8"); // utf8 encoding is set so that we can read the text data that is input
-  stdin.resume(); // resume stdin so the program can listen for input
-
+  const stdin = process.stdin; 
+  stdin.setRawMode(true);
+  stdin.setEncoding("utf8");
+  stdin.resume();
   stdin.on("data", handleUserInput);
-
-  return stdin;   // return the stdin object so we can use it elsewhere in the program
+  return stdin;   
 };
 
 const handleUserInput = (key) => {
-  switch (key) {
+  if(keyMovements[key]){
+    connection.write(keyMovements[key]);
+  }
 
-    //Move commands
-    case 'w':
-      connection.write(keyMovements.MOVE_UP_KEY);
-      break;
-    case 'a':
-      connection.write(keyMovements.MOVE_LEFT_KEY);
-      break;
-    case 's':
-      connection.write(keyMovements.MOVE_DOWN_KEY);
-      break;
-    case 'd':
-      connection.write(keyMovements.MOVE_RIGHT_KEY);
-      break;
-
-    //User Messages
-    case 'h':
-      connection.write(userMessages.H_KEY);
-      break;
-    case 'g':
-      connection.write(userMessages.G_KEY);
-      break;
-    case 'b':
-      connection.write(userMessages.B_KEY);
-      break;
-    case '?':
-      connection.write(userMessages.QUESTION_MARK_KEY);
-      break;
-
-    //Terminate process
-    case '\u0003':
-      process.exit();
+  //Terminate Process
+  if (key === '\u0003'){
+    process.exit();
   }
 
 };

@@ -3,10 +3,10 @@ const PORT = 50541;
 
 //w,a,s,d 
 const keyMovements = {
-  MOVE_UP_KEY: "Move: up",
-  MOVE_LEFT_KEY: "Move: left",
-  MOVE_DOWN_KEY: "Move: down",
-  MOVE_RIGHT_KEY: "Move: right"
+  w: "Move: up",
+  a: "Move: left",
+  s: "Move: down",
+  d: "Move: right"
 }
 
 //Client Messages
