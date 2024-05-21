@@ -5,7 +5,7 @@ A client-side implementation of the terminal-base Snake written in JavaScript (N
 ## Instructions
 In order to play the game, both server side and client side need to be installed.
 
-The link to installing the server side for Snake can be [found here](https://github.com/rlitoncs/snek-multiplayer) written by [lighthouselabs](https://github.com/lighthouse-labs/snek-multiplayer).
+The link to installing the server side for Snake can be [found here](https://github.com/lighthouse-labs/snek-multiplayer) written by [lighthouselabs](https://github.com/lighthouse-labs/snek-multiplayer).
 
 Once the server side is installed, you are ready to install the client side!
 
